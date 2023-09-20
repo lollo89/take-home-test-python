@@ -16,6 +16,22 @@ RULE = "revenue is above 1000000"
 # flood_risk is below 5
 # """
 
+# RULE = """
+# (
+#     revenue is above 1000000
+#     AND
+#     flood_risk is above 4
+# )
+# OR
+# (
+#     revenue is below 1500
+#     AND
+#     flood_risk is below or equals 5
+#     AND
+#     credit_rating is above 50
+# )
+# """
+
 
 def evaluate(rule, data):
     rule_tree = parse_rule(rule)

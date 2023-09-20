@@ -8,10 +8,10 @@ class TestRuleParser(unittest.TestCase):
         statement_parser = Mock(
             **{'parse_statement.side_effect': lambda value: value})
 
-        modules = {'app.statement_parser': statement_parser}
+        modules = {'rule_engine.statement_parser': statement_parser}
         patch.dict('sys.modules', modules).start()
 
-        from app.rule_parser import parse_rule
+        from rule_engine.rule_parser import parse_rule
         self.parse_rule = parse_rule
 
         return super().setUp()

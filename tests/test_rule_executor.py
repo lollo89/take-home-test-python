@@ -1,6 +1,7 @@
 import unittest
 
-from app.rule_executor import execute_rule
+from rule_engine.rule_executor import execute_rule
+
 
 class TestRuleExecutor(unittest.TestCase):
     def test_execute_gr_rule_true(self):

@@ -1,4 +1,4 @@
-from app.statement_parser import parse_statement
+from rule_engine.statement_parser import parse_statement
 
 
 def parse_rule(rule):

@@ -14,7 +14,9 @@ There are also few examples of rules with different complexity commented in the 
 
 ## Assumptions
 
-During development, I operated under the assumption that rules are defined as ONE statement/operator per line. Therefore, if one wishes to create a complex rule with two parentheses, it would be written as shown below.
+During development, I operated few assumption.
+
+The first assumption is that rules are defined as ONE statement/operator per line. Therefore, if one wishes to create a complex rule with two parentheses, it would be written as shown below.
 
 ```python
 RULE = """
@@ -33,3 +35,13 @@ OR
 )
 """
 ```
+
+Another assumption made is the constant's type, which must always be a number.
+
+- Valid statement: `revenue is below 1500`
+- Invalid statement: `favourite_fruit is equals kiwi`
+
+The last assumption made is the field name, which must never have a empty space in between.
+
+- Valid statement: `revenue is below 1500`
+- Invalid statement: `credit score is equals 10`
